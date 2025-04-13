@@ -47,7 +47,7 @@ In questa analisi sono stati presi in considerazione 5 KPIs fondamentali:
 
 I KPIs di riferimento sono stati calcolati a livello mensile, facendo una media dei valori giornalieri ottenuti, per ogni dataset a disposizione.
 
-L'impatto dei guasti è stato quantificato utilizzando il Fault Impact Ratio (FIR) come in [Xing Lu et al.](https://www.sciencedirect.com/science/article/abs/pii/S0378778821007325)
+L'impatto dei guasti è stato quantificato utilizzando il **Fault Impact Ratio (FIR)** come in [Xing Lu et al.](https://www.sciencedirect.com/science/article/abs/pii/S0378778821007325)
 Tuttavia, per permette una comparazione equa tra i FIR, è stato calcolato il FIR normalizzato (contenuto tra [0, 100]) per ogni KPI, tramite il metodo di normalizzazione min/max.
 
 L’impatto multi-criterio è stato calcolato generando combinazioni casuali di pesi da una distribuzione di Dirichlet, utilizzate per ottenere il FIR normalizzato medio pesato sui 5 KPIs, per ciascun tipo di guasto.
@@ -56,10 +56,10 @@ Il risultato è una classifica che evidenzia i guasti con l’impatto globale pi
 ---
 
 ## FDD fully data-driven con CS-TAN
-Il procedimento per la selezione delle variabili di input, per la costruzione della struttura della rete bayesiana CS-TAN e per la stima delle probabilità condizionate è descritto in questa [repository.](https://github.com/Paolini408/DataDrivenBNClassifierFDD)
-La differenza sostanziale, sta nella definizione dei pesi da assegnare a ogni classe.
-In particolare, basandosi sul ranking ottenuto dalla fase di analisi multi-criterio, è stato possibile definire i pesi da assegnare a ciascuna classe tramite il metodo _Exponential Weights_.
-Conseguentemente, è possibile confrontare i risultati ottenuti con e senza l'analisi multi-criterio.
+Il procedimento per la selezione delle variabili di input, la costruzione della struttura della rete bayesiana CS-TAN e la stima delle probabilità condizionate è descritto in dettaglio in questa [repository GitHub.](https://github.com/Paolini408/DataDrivenBNClassifierFDD)
+La principale differenza introdotta in questo lavoro riguarda la definizione dei pesi associati a ciascuna classe.
+In particolare, partendo dal ranking ottenuto nella fase di analisi multi-criterio, è stato possibile assegnare i pesi alle classi tramite il metodo degli _Exponential Weights_.
+Questa modifica consente di confrontare le prestazioni del modello di classificazione fully data-driven con e senza l’integrazione dell’analisi multi-criterio, evidenziando il contributo di quest’ultima al miglioramento del modello.
 
 ---
 
@@ -75,6 +75,6 @@ Le prestazioni del modello CS-TAN sono state valutate utilizzando le seguenti me
 ---
 
 ## Conclusioni
-L’approccio proposto dimostra come l’integrazione tra analisi multi-criterio e modelli data-driven possa migliorare l’efficacia e la sensibilità della diagnosi automatica dei guasti nei sistemi HVAC.
+L’approccio **cost sensitive** proposto dimostra come l’integrazione tra analisi multi-criterio e modelli fully data-driven possa migliorare l’efficacia e la sensibilità della diagnosi automatica dei guasti nei sistemi HVAC.
 
 Per ulteriori dettagli, non esitare a contattare il creatore [Marco Paolini](https://github.com/Paolini408).
