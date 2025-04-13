@@ -1,0 +1,27 @@
+# Unit conversion (used only in utils/preprocessing.py)
+columns_to_convert:
+  temp: [ 'RM_TEMP', 'RMCLGSPT', 'RMHTGSPT', 'FCU_MAT', 'FCU_DAT', 'FCU_RAT', 'FCU_OAT', 'FCU_CLG_EWT', 'FCU_CLG_RWT', 'FCU_HTG_EWT', 'FCU_HTG_RWT' ]
+  water_flow: [ 'FCU_CLG_GPM', 'FCU_HTG_GPM' ]
+  air_flow: [ 'FCU_DA_CFM', 'FCU_OA_CFM' ]
+  fan_speed: [ 'FCU_SPD' ]
+
+# Variables
+t_room: 'RM_TEMP'
+t_cooling_sp: 'RMCLGSPT'
+t_heating_sp: 'RMHTGSPT'
+mat: 'FCU_MAT'
+dat: 'FCU_DAT'
+rat: 'FCU_RAT'
+oat: 'FCU_OAT'
+discharge_flow: 'FCU_DA_CFM'
+outdoor_flow: 'FCU_OA_CFM'
+p_cooling: 'P_cooling'
+p_heating: 'P_heating'
+fan_rpm: 'FCU_SPD'
+fan_power: 'FCU_WAT'
+ccv_command: 'FCU_CVLV_DM'
+hcv_command: 'FCU_HVLV_DM'
+oad_command: 'FCU_DMPR_DM'
+ccv_position: 'FCU_CVLV'
+hcv_position: 'FCU_HVLV'
+oad_position: 'FCU_DMPR'
